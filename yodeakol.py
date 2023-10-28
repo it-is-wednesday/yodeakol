@@ -5,7 +5,7 @@ Omnipotent
 __version__ = "322"
 
 import os
-from dataclasses import dataclass
+from pathlib import Path
 from subprocess import run
 
 from flask import Flask, flash, redirect, render_template, request
@@ -18,9 +18,7 @@ app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 
-@dataclass
-class SearchResult:
-    title: str
+Path("uploads").mkdir(exist_ok=True)
 
 
 def allowed_file(filename):
