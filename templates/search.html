@@ -1,0 +1,12 @@
+<!doctype html>
+<!-- -*- engine:jinja2 -*- -->
+<html>
+    <head>
+        <title>Search results</title>
+    </head>
+    <body>
+        {% for result in results %}
+            <a href="uploads/{{ result }}">{{ result }}</a>
+        {% endfor %}
+    </body>
+</html>

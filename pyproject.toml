@@ -1,0 +1,14 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "yodeakol"
+authors = [{name = "Maor Kadosh", email = "git@avocadosh.xyz"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+dynamic = ["version", "description"]
+dependencies = ["flask"]
+
+[project.optional-dependencies]
+dev = ["types-flask", "types-werkzeug"]

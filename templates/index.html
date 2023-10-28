@@ -1,0 +1,21 @@
+<!doctype html>
+<!-- -*- engine:jinja2 -*- -->
+<html>
+    <head>
+        <title>Upload new File</title>
+    </head>
+    <body>
+        {% if after_upload %}
+            <p>Done! Let's upload another?</p>
+        {% endif %}
+        <h1>Upload new File</h1>
+        <form method=post enctype=multipart/form-data>
+            <input type=file name="file">
+            <input type=submit value="Upload">
+        </form>
+        <h1>Search articles</h1>
+        <form method="get" action="/search">
+            <input type="search" name="query">
+        </form>
+    </body>
+</html>
