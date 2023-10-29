@@ -6,7 +6,7 @@
     </head>
     <body>
         {% for result in results %}
-            <a href="uploads/{{ result }}">{{ result }}</a>
+            <a href="uploads/{{ result }}">{{ result | replace(".html", "") }}</a>
         {% endfor %}
     </body>
 </html>
